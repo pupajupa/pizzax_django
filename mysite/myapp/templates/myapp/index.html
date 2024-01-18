@@ -11,25 +11,8 @@
   <title>Pizza maker</title>
 </head>
 
-<body>
-  <nav class="bg-slate-600 sha">
-    <div class="max-w-6x1 mx-auto px-4">
-      <div class="flex justify-between">
-        <div class="flex space-x-7">
-          <div>
-            <a href="#" class="flex items-center px-2 py-4">
-              <img class="h-16 w-16" src="{% static 'myapp/images/logo.png' %}" alt="logo" />
-            </a>
-          </div>
-          <div>
-            <a href="#" class="py-4 px-2 text-gray-500 font-semibold border-b-8">Home</a>
-            <a href="#" class="py-4 px-2 text-gray-500 font-semibold">About</a>
-            <a href="#" class="py-4 px-2 text-gray-500 font-semibold">Contacts</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </nav>
+<body> 
+  {% include "myapp/navbar.html" %}
   {% block content %}
 
   {% endblock content %}
