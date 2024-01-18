@@ -1,0 +1,15 @@
+{% extends "myapp/index.html" %}
+{% load static %}
+
+
+{% block content %}
+  <div style = "display:inline">
+  <h4>
+    {% for item in items %}
+      <a href="{% url 'myapp:detail_pizza' item.id %}">
+        {{item.name}} | {{item.description}} | {{item.price}} <br />
+      </a>
+    {% endfor %}
+  </h4>
+  </div>
+{% endblock content %}
