@@ -16,3 +16,16 @@ def pizzas_list(request):
         'items':items    
     }
     return render(request,"myapp/pizzas_list.html",context)
+
+def add_pizza(request):
+    if request.method=="POST":
+        name = request.POST.get("name")
+        price = request.POST.get("price")
+        description = request.POST.get("description")
+        image =request.FILES.get("upload")
+        item = Pizza(name = name,price=price,description=description,image=image)
+        item.save()
+    return render(request,"myapp/add_pizza.html")
+
+def update_pizza_item(request,my_id):
+    return render(request,"myapp/update_pizza_item.html")
