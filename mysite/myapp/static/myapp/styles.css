@@ -557,8 +557,16 @@ video {
   margin-bottom: 0.5rem;
 }
 
+.ml-10 {
+  margin-left: 2.5rem;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .block {
@@ -577,8 +585,20 @@ video {
   height: 4rem;
 }
 
+.w-1\/4 {
+  width: 25%;
+}
+
 .w-16 {
   width: 4rem;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .max-w-7xl {
@@ -685,6 +705,11 @@ video {
 .text-gray-500 {
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-600 {
+  --tw-text-opacity: 1;
+  color: rgb(75 85 99 / var(--tw-text-opacity));
 }
 
 .text-gray-700 {

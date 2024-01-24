@@ -1,8 +1,13 @@
 {% extends "myapp/index.html" %}
-{% load static %}
+{% load humanize %}
 
 {% block content %}
-    <h1>
-        This detail page for Margarita : {{item.name}}
-    </h1>
+  <div class="flex p-10 w-full h-200">
+    <img class="w-1/4" src="{{item.image.url}}" alt="itemPizza">
+    <div class="w-3/4 text-xl ml-10 mt-10">
+      <p class="mt-5">{{item.name}}</p>
+      <p class="mt-5 text-green-500">$ {{item.price | intcomma}}</p>
+      <p class="mt-5 text-gray-600">{{item.description}}</p>
+    </div>
+  </div>
 {% endblock content %}
