@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 
 from .models import Pizza
 
@@ -28,4 +28,25 @@ def add_pizza(request):
     return render(request,"myapp/add_pizza.html")
 
 def update_pizza_item(request,my_id):
-    return render(request,"myapp/update_pizza_item.html")
+    item = Pizza.objects.get(id=my_id)
+    if request.method=="POST":
+        item.name = request.POST.get("name")
+        item.price = request.POST.get("price")
+        item.description = request.POST.get("description")
+        item.image =request.FILES.get("upload",item.image)
+        item.save()
+        return redirect("/myapp/")
+    context = {
+        'item':item    
+    }
+    return render(request,"myapp/update_pizza_item.html",context)
+
+def delete_pizza_item(request,my_id):
+    item = Pizza.objects.get(id=my_id)
+    if request.method=="POST":
+        item.delete()
+        return redirect("/myapp/")
+    context = {
+        'item':item    
+    }
+    return render(request,"myapp/delete_pizza_item.html",context)
