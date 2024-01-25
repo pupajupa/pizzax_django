@@ -619,6 +619,10 @@ video {
   margin-top: 1.25rem;
 }
 
+.mt-8 {
+  margin-top: 2rem;
+}
+
 .mt-\[50px\] {
   margin-top: 50px;
 }
@@ -727,6 +731,11 @@ video {
 
 .border {
   border-width: 1px;
+}
+
+.bg-gray-50 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(249 250 251 / var(--tw-bg-opacity));
 }
 
 .bg-green-600 {
@@ -857,6 +866,10 @@ video {
   font-weight: 700;
 }
 
+.font-semibold {
+  font-weight: 600;
+}
+
 .leading-tight {
   line-height: 1.25;
 }
@@ -925,10 +938,6 @@ video {
 }
 
 @media (min-width: 640px) {
-  .sm\:mt-12 {
-    margin-top: 3rem;
-  }
-
   .sm\:grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -949,10 +958,6 @@ video {
 }
 
 @media (min-width: 768px) {
-  .md\:mt-16 {
-    margin-top: 4rem;
-  }
-
   .md\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -964,10 +969,6 @@ video {
 }
 
 @media (min-width: 1024px) {
-  .lg\:mt-20 {
-    margin-top: 5rem;
-  }
-
   .lg\:grid-cols-4 {
     grid-template-columns: repeat(4, minmax(0, 1fr));
   }
@@ -983,10 +984,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-28 {
-    margin-top: 7rem;
-  }
-
   .xl\:inline-block {
     display: inline-block;
   }
